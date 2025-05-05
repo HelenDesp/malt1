@@ -23,7 +23,7 @@ export default function NFTDashboard() {
 
       setLoading(true);
       try {
-        const url = \`https://base-mainnet.g.alchemy.com/v2/\${ALCHEMY_API_KEY}/getNFTsForOwner?owner=\${address}&contractAddresses[]=\${CONTRACT_ADDRESS}&withMetadata=true\`;
+        const url = `https://base-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&contractAddresses[]=${CONTRACT_ADDRESS}&withMetadata=true`;
         const response = await fetch(url);
         const data = await response.json();
 
